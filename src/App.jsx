@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
@@ -18,22 +17,19 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  const location = useLocation()
   return (
     <Layout>
       <ScrollToTop />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/"          element={<Home />} />
-          <Route path="/services"  element={<Services />} />
-          <Route path="/barbers"   element={<Barbers />} />
-          <Route path="/gallery"   element={<Gallery />} />
-          <Route path="/about"     element={<About />} />
-          <Route path="/contact"   element={<Contact />} />
-          <Route path="/booking"   element={<Booking />} />
-          <Route path="*"          element={<NotFound />} />
-        </Routes>
-      </AnimatePresence>
+      <Routes>
+        <Route path="/"          element={<Home />} />
+        <Route path="/services"  element={<Services />} />
+        <Route path="/barbers"   element={<Barbers />} />
+        <Route path="/gallery"   element={<Gallery />} />
+        <Route path="/about"     element={<About />} />
+        <Route path="/contact"   element={<Contact />} />
+        <Route path="/booking"   element={<Booking />} />
+        <Route path="*"          element={<NotFound />} />
+      </Routes>
     </Layout>
   )
 }

@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <PageWrap>
       {/* ============== HERO ============== */}
-      <section className="relative min-h-[560px] h-[calc(100vh-110px)] max-h-[900px] flex items-end overflow-hidden grain bg-ink">
+      <section className="relative min-h-[520px] h-[calc(100vh-110px)] max-h-[860px] flex items-end overflow-hidden grain bg-ink">
         {/* Background image with parallax-ish scale */}
         <motion.div
           initial={{ scale: 1.15, opacity: 0 }}
@@ -53,10 +53,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-16 w-full pb-10 sm:pb-14 pt-20 sm:pt-24 z-10">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-16 w-full pb-8 sm:pb-10 pt-6 sm:pt-10 z-10">
           <motion.div
             initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
-            className="font-stencil text-[.65rem] sm:text-[.7rem] tracking-stencil text-brass mb-4 sm:mb-6"
+            className="font-stencil text-[.6rem] sm:text-[.65rem] tracking-stencil text-brass mb-3"
           >
             ✦ {t('hero.eyebrow')}
           </motion.div>
@@ -67,27 +67,27 @@ export default function Home() {
             animate="show"
             className="font-display text-bone hero-title"
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden leading-none py-[2px]">
               <motion.div variants={titleWord}>{t('hero.title1')}</motion.div>
             </div>
-            <div className="overflow-hidden flex flex-wrap items-baseline gap-x-6">
+            <div className="overflow-hidden leading-none py-[2px] flex flex-wrap items-baseline gap-x-6">
               <motion.div variants={titleWord} className="text-stroke-brass">{t('hero.title2')}</motion.div>
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden leading-none py-[2px]">
               <motion.div variants={titleWord} className="text-blood">{t('hero.title3')}</motion.div>
             </div>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.05 }}
-            className="mt-5 sm:mt-7 max-w-xl text-bone/85 text-sm sm:text-base md:text-lg leading-relaxed"
+            className="mt-4 sm:mt-5 max-w-xl text-bone/85 text-sm sm:text-base leading-relaxed"
           >
             {t('hero.subtitle')}
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.25 }}
-            className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4"
+            className="mt-5 sm:mt-6 flex flex-wrap gap-3"
           >
             <Link to="/booking" className="btn btn-brass btn-shine">{t('hero.ctaBook')}</Link>
             <Link to="/contact" className="btn btn-outline">{t('hero.ctaWalk')}</Link>
@@ -95,7 +95,7 @@ export default function Home() {
 
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.6 }}
-            className="mt-8 sm:mt-12 flex items-center gap-6 sm:gap-10 md:gap-14"
+            className="mt-6 sm:mt-8 flex items-center gap-5 sm:gap-8 md:gap-12"
           >
             <div>
               <div className="num-big text-brass">17+</div>

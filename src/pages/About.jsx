@@ -9,18 +9,18 @@ export default function About() {
   return (
     <PageWrap>
       {/* Hero */}
-      <section className="relative pt-24 pb-12 md:pt-36 md:pb-16 bg-ink grain overflow-hidden">
+      <section className="relative pt-16 pb-10 md:pt-24 md:pb-14 bg-ink grain overflow-hidden">
         <div className="spot -top-40 -left-20" />
         <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="font-stencil text-[.7rem] tracking-stencil text-brass mb-5">✦ {t('about.eyebrow')}</div>
-          <h1 className="font-display text-bone" style={{ fontSize: 'clamp(3rem, 9vw, 7rem)', lineHeight: 0.9 }}>
+          <div className="font-stencil text-[.65rem] sm:text-[.7rem] tracking-stencil text-brass mb-4">✦ {t('about.eyebrow')}</div>
+          <h1 className="font-display text-bone page-title">
             {t('about.title')}
           </h1>
         </div>
       </section>
 
       {/* Story */}
-      <section className="py-16 md:py-24 bg-ink">
+      <section className="py-12 md:py-20 bg-ink">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
@@ -52,7 +52,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-16 md:py-24 brick-bg grain border-y border-bone/5">
+      <section className="py-12 md:py-20 brick-bg grain border-y border-bone/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="chrome-rule mb-10">{t('about.values.title')}</div>
           <div className="grid md:grid-cols-2 gap-px bg-bone/10 border border-bone/10">
@@ -73,9 +73,9 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-ink">
+      <section className="py-14 md:py-20 bg-ink">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h3 className="font-display text-bone text-3xl md:text-5xl leading-tight">
+          <h3 className="font-display text-bone section-title">
             {t('booking.title')}
           </h3>
           <p className="text-fog mt-4">{t('booking.subtitle')}</p>

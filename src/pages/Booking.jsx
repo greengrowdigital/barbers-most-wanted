@@ -59,10 +59,10 @@ export default function Booking() {
 
   return (
     <PageWrap>
-      <section className="relative pt-20 pb-10 md:pt-28 md:pb-12 bg-ink grain overflow-hidden">
+      <section className="relative pt-14 pb-8 md:pt-20 md:pb-10 bg-ink grain overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="font-stencil text-[.7rem] tracking-stencil text-brass mb-4">✦ {t('booking.eyebrow')}</div>
-          <h1 className="font-display text-bone" style={{ fontSize: 'clamp(2.6rem, 8vw, 6rem)', lineHeight: 0.9 }}>
+          <div className="font-stencil text-[.65rem] sm:text-[.7rem] tracking-stencil text-brass mb-4">✦ {t('booking.eyebrow')}</div>
+          <h1 className="font-display text-bone page-title">
             {t('booking.title')}
           </h1>
           <p className="text-fog text-base md:text-lg mt-4 max-w-2xl">{t('booking.subtitle')}</p>
@@ -94,8 +94,8 @@ export default function Booking() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-ink">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-10">
+      <section className="py-10 md:py-14 bg-ink">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-8 lg:gap-10">
           {/* Wizard panel */}
           <div className="lg:col-span-8">
             <AnimatePresence mode="wait">
@@ -542,7 +542,7 @@ function ConfirmScreen({ t, confirmation, onAnother }) {
         transition={{ delay: 0.15, type: 'spring', stiffness: 180, damping: 14 }}
         className="w-24 h-24 rounded-full bg-brass text-ink flex items-center justify-center mx-auto mb-6 font-display text-5xl"
       >✓</motion.div>
-      <h2 className="font-display text-bone" style={{ fontSize: 'clamp(2.4rem, 6vw, 4rem)', lineHeight: 0.95 }}>
+      <h2 className="font-display text-bone section-title">
         {t('booking.confirm.title')}
       </h2>
       <p className="text-fog mt-4 max-w-md mx-auto">{t('booking.confirm.sub')}</p>

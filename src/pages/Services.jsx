@@ -26,14 +26,14 @@ export default function Services() {
   return (
     <PageWrap>
       {/* Header */}
-      <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 bg-ink grain overflow-hidden">
+      <section className="relative pt-16 pb-10 md:pt-24 md:pb-14 bg-ink grain overflow-hidden">
         <div className="spot -top-40 right-0" />
         <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="font-stencil text-[.7rem] tracking-stencil text-brass mb-5">✦ {t('services.eyebrow')}</div>
-          <h1 className="font-display text-bone" style={{ fontSize: 'clamp(3rem, 9vw, 7rem)', lineHeight: 0.9 }}>
+          <div className="font-stencil text-[.65rem] sm:text-[.7rem] tracking-stencil text-brass mb-4">✦ {t('services.eyebrow')}</div>
+          <h1 className="font-display text-bone page-title">
             {t('services.title')}
           </h1>
-          <p className="text-fog text-lg mt-6 max-w-2xl leading-relaxed">{t('services.subtitle')}</p>
+          <p className="text-fog text-base md:text-lg mt-5 max-w-2xl leading-relaxed">{t('services.subtitle')}</p>
         </div>
       </section>
 
@@ -58,7 +58,7 @@ export default function Services() {
       </section>
 
       {/* Service grid */}
-      <section className="py-16 md:py-24 bg-ink">
+      <section className="py-12 md:py-20 bg-ink">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence mode="popLayout">
@@ -104,10 +104,10 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="bg-graphite py-16 border-t border-bone/5">
+      <section className="bg-graphite py-14 border-t border-bone/5">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <div className="chrome-rule mb-4">{t('booking.eyebrow')}</div>
-          <h3 className="font-display text-bone text-3xl md:text-5xl leading-tight">
+          <h3 className="font-display text-bone section-title">
             {t('booking.title')}
           </h3>
           <Link to="/booking" className="btn btn-brass btn-shine mt-8">{t('hero.ctaBook')}</Link>

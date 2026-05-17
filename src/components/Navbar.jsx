@@ -32,9 +32,10 @@ export default function Navbar() {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-black text-bone/80 py-2.5 px-6 text-center border-b border-bone/5">
-        <div className="font-stencil text-[.65rem] tracking-stencil">
-          <span>{t('top.bar')}</span>
+      <div className="bg-black text-bone/80 py-2 px-4 text-center border-b border-bone/5 overflow-hidden">
+        <div className="font-stencil text-[.55rem] sm:text-[.65rem] tracking-stencil whitespace-nowrap overflow-hidden text-ellipsis">
+          <span className="hidden sm:inline">{t('top.bar')}</span>
+          <span className="sm:hidden">2786 Long Beach Rd · Oceanside NY</span>
           <span className="mx-3 text-brass opacity-40">·</span>
           <Link to="/booking" className="text-brass underline underline-offset-4 hover:text-brass-light">
             {t('top.cta')}
@@ -48,15 +49,15 @@ export default function Navbar() {
       {/* Nav */}
       <header className={"sticky top-0 z-50 bg-ink/95 backdrop-blur-md border-b border-bone/5 transition-all duration-500 " + (scrolled ? 'py-1' : 'py-3')}>
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
-          <Link to="/" className="flex items-center gap-3 group">
-            <span className="w-10 h-10 bg-blood flex items-center justify-center font-display text-bone text-xl border-2 border-bone/20 group-hover:border-brass transition">B</span>
-            <div className="leading-tight">
-              <div className="font-display text-bone text-lg sm:text-xl tracking-wide">BARBERS MOST WANTED</div>
-              <div className="font-stencil text-[.6rem] tracking-stencil text-fog">{t('brand.tagline')}</div>
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group min-w-0">
+            <span className="w-9 h-9 sm:w-10 sm:h-10 bg-blood flex items-center justify-center font-display text-bone text-lg sm:text-xl border-2 border-bone/20 group-hover:border-brass transition flex-shrink-0">B</span>
+            <div className="leading-tight min-w-0">
+              <div className="font-display text-bone text-sm sm:text-lg lg:text-xl tracking-wide truncate">BARBERS MOST WANTED</div>
+              <div className="font-stencil text-[.55rem] sm:text-[.6rem] tracking-stencil text-fog truncate">{t('brand.tagline')}</div>
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
             {links.map(l => (
               <NavLink
                 key={l.to}
@@ -69,23 +70,23 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <button
               onClick={toggle}
               aria-label="Toggle language"
-              className="font-condensed text-[.75rem] tracking-stencil border border-bone/15 text-bone hover:border-brass hover:text-brass px-3 py-2 transition"
+              className="font-condensed text-[.7rem] sm:text-[.75rem] tracking-stencil border border-bone/15 text-bone hover:border-brass hover:text-brass px-2.5 sm:px-3 py-2 transition"
             >
               <span className={lang === 'en' ? 'text-brass' : 'opacity-60'}>EN</span>
               <span className="mx-1 opacity-30">/</span>
               <span className={lang === 'es' ? 'text-brass' : 'opacity-60'}>ES</span>
             </button>
 
-            <Link to="/booking" className="btn btn-brass btn-shine hidden md:inline-flex text-[.7rem]">
+            <Link to="/booking" className="btn btn-brass btn-shine hidden md:inline-flex text-[.65rem] lg:text-[.7rem] px-4 py-3 lg:px-5">
               {t('nav.bookNow')}
             </Link>
 
             <button
-              className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1 border border-bone/15"
+              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 flex flex-col items-center justify-center gap-1 border border-bone/15 flex-shrink-0"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
             >

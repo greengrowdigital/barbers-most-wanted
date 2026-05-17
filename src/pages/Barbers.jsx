@@ -12,19 +12,19 @@ export default function Barbers() {
 
   return (
     <PageWrap>
-      <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 bg-ink grain overflow-hidden">
+      <section className="relative pt-16 pb-10 md:pt-24 md:pb-14 bg-ink grain overflow-hidden">
         <div className="spot -top-40 left-0" />
         <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="font-stencil text-[.7rem] tracking-stencil text-brass mb-5">✦ {t('barbers.eyebrow')}</div>
-          <h1 className="font-display text-bone" style={{ fontSize: 'clamp(3rem, 9vw, 7rem)', lineHeight: 0.9 }}>
+          <div className="font-stencil text-[.65rem] sm:text-[.7rem] tracking-stencil text-brass mb-4">✦ {t('barbers.eyebrow')}</div>
+          <h1 className="font-display text-bone page-title">
             {t('barbers.title')}
           </h1>
-          <p className="text-fog text-lg mt-6 max-w-2xl leading-relaxed">{t('barbers.subtitle')}</p>
+          <p className="text-fog text-base md:text-lg mt-5 max-w-2xl leading-relaxed">{t('barbers.subtitle')}</p>
         </div>
       </section>
 
       {/* Selector */}
-      <section className="py-16 md:py-24 bg-ink">
+      <section className="py-12 md:py-20 bg-ink">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Tabs (left on desktop) */}
           <div className="lg:col-span-4 flex flex-col gap-px bg-bone/10 border border-bone/10">
@@ -107,7 +107,7 @@ export default function Barbers() {
       </section>
 
       {/* All barbers grid (alternative view) */}
-      <section className="py-16 md:py-24 bg-graphite border-t border-bone/5">
+      <section className="py-12 md:py-20 bg-graphite border-t border-bone/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="chrome-rule mb-10">All barbers · Todos los barberos</div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

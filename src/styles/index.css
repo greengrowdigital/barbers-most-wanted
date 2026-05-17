@@ -275,8 +275,30 @@ body {
 /* === Number ticker === */
 .num-big {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-size: clamp(2.2rem, 5.2vw, 4.6rem);
   line-height: 1;
+}
+
+/* === Responsive hero typography ===
+   Designed to fit a typical 1366×768 / 1440×900 laptop without scrolling
+   the hero. Combines vw + vh so the title scales with both axes. */
+.hero-title {
+  font-size: clamp(3rem, min(11vw, 13vh), 9rem);
+  line-height: .85;
+}
+.page-title {
+  font-size: clamp(2.4rem, min(7vw, 9vh), 5.5rem);
+  line-height: .92;
+}
+.section-title {
+  font-size: clamp(2rem, min(5vw, 7vh), 4rem);
+  line-height: .95;
+}
+
+/* Section padding scale */
+.section-pad {
+  padding-top: clamp(3.5rem, 7vw, 7rem);
+  padding-bottom: clamp(3.5rem, 7vw, 7rem);
 }
 
 /* === Hero scroll arrow === */

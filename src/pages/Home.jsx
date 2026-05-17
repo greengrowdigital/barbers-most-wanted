@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <PageWrap>
       {/* ============== HERO ============== */}
-      <section className="relative min-h-[100vh] flex items-end overflow-hidden grain bg-ink">
+      <section className="relative min-h-[560px] h-[calc(100vh-110px)] max-h-[900px] flex items-end overflow-hidden grain bg-ink">
         {/* Background image with parallax-ish scale */}
         <motion.div
           initial={{ scale: 1.15, opacity: 0 }}
@@ -53,10 +53,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-16 w-full pb-20 pt-32 z-10">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-16 w-full pb-10 sm:pb-14 pt-20 sm:pt-24 z-10">
           <motion.div
             initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
-            className="font-stencil text-[.7rem] tracking-stencil text-brass mb-8"
+            className="font-stencil text-[.65rem] sm:text-[.7rem] tracking-stencil text-brass mb-4 sm:mb-6"
           >
             ✦ {t('hero.eyebrow')}
           </motion.div>
@@ -65,8 +65,7 @@ export default function Home() {
             variants={titleStagger}
             initial="hidden"
             animate="show"
-            className="font-display text-bone"
-            style={{ fontSize: 'clamp(4.5rem, 16vw, 13rem)', lineHeight: 0.82 }}
+            className="font-display text-bone hero-title"
           >
             <div className="overflow-hidden">
               <motion.div variants={titleWord}>{t('hero.title1')}</motion.div>
@@ -81,14 +80,14 @@ export default function Home() {
 
           <motion.p
             initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.05 }}
-            className="mt-8 max-w-xl text-bone/85 text-base md:text-lg leading-relaxed"
+            className="mt-5 sm:mt-7 max-w-xl text-bone/85 text-sm sm:text-base md:text-lg leading-relaxed"
           >
             {t('hero.subtitle')}
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.25 }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4"
           >
             <Link to="/booking" className="btn btn-brass btn-shine">{t('hero.ctaBook')}</Link>
             <Link to="/contact" className="btn btn-outline">{t('hero.ctaWalk')}</Link>
@@ -96,21 +95,21 @@ export default function Home() {
 
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.6 }}
-            className="mt-16 flex items-center gap-10 md:gap-14"
+            className="mt-8 sm:mt-12 flex items-center gap-6 sm:gap-10 md:gap-14"
           >
             <div>
               <div className="num-big text-brass">17+</div>
-              <div className="font-stencil text-[.65rem] tracking-stencil text-fog mt-2">{t('hero.stat1')}</div>
+              <div className="font-stencil text-[.6rem] sm:text-[.65rem] tracking-stencil text-fog mt-1 sm:mt-2">{t('hero.stat1')}</div>
             </div>
-            <div className="w-px h-12 bg-bone/15" />
+            <div className="w-px h-8 sm:h-12 bg-bone/15" />
             <div>
               <div className="num-big text-bone">04</div>
-              <div className="font-stencil text-[.65rem] tracking-stencil text-fog mt-2">{t('hero.stat2')}</div>
+              <div className="font-stencil text-[.6rem] sm:text-[.65rem] tracking-stencil text-fog mt-1 sm:mt-2">{t('hero.stat2')}</div>
             </div>
-            <div className="w-px h-12 bg-bone/15" />
+            <div className="w-px h-8 sm:h-12 bg-bone/15" />
             <div>
               <div className="num-big text-bone">820+</div>
-              <div className="font-stencil text-[.65rem] tracking-stencil text-fog mt-2">{t('hero.stat3')}</div>
+              <div className="font-stencil text-[.6rem] sm:text-[.65rem] tracking-stencil text-fog mt-1 sm:mt-2">{t('hero.stat3')}</div>
             </div>
           </motion.div>
 
@@ -125,7 +124,7 @@ export default function Home() {
       <Marquee text={t('marquee')} />
 
       {/* ============== INTRO / ABOUT PREVIEW ============== */}
-      <section className="relative py-24 md:py-36 grain bg-ink overflow-hidden">
+      <section className="relative py-16 md:py-24 grain bg-ink overflow-hidden">
         <div className="spot top-[-200px] right-[-200px]" />
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
           <motion.div
@@ -153,8 +152,7 @@ export default function Home() {
             <motion.h2
               initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.7 }}
-              className="font-display text-bone mb-6"
-              style={{ fontSize: 'clamp(2.4rem, 5vw, 4.4rem)', lineHeight: 0.95 }}
+              className="font-display text-bone mb-6 section-title"
             >
               {t('intro.title')}
             </motion.h2>
@@ -182,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* ============== SERVICES PREVIEW ============== */}
-      <section className="relative py-24 md:py-32 bg-graphite border-y border-bone/5">
+      <section className="relative py-14 md:py-20 bg-graphite border-y border-bone/5">
         <div className="max-w-7xl mx-auto px-6">
           <SectionTitle
             eyebrow={t('services.eyebrow')}
@@ -231,7 +229,7 @@ export default function Home() {
       </section>
 
       {/* ============== WHY US ============== */}
-      <section className="relative py-24 md:py-32 brick-bg grain overflow-hidden">
+      <section className="relative py-14 md:py-20 brick-bg grain overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <SectionTitle
             eyebrow={t('why.eyebrow')}
@@ -255,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* ============== BARBERS PREVIEW ============== */}
-      <section className="relative py-24 md:py-32 bg-ink">
+      <section className="relative py-14 md:py-20 bg-ink">
         <div className="max-w-7xl mx-auto px-6">
           <SectionTitle
             eyebrow={t('barbers.eyebrow')}
@@ -295,11 +293,11 @@ export default function Home() {
       </section>
 
       {/* ============== CTA STRIP ============== */}
-      <section className="relative py-24 md:py-32 bg-blood overflow-hidden">
+      <section className="relative py-14 md:py-20 bg-blood overflow-hidden">
         <div className="grain absolute inset-0" />
         <div className="max-w-5xl mx-auto px-6 text-center relative">
           <div className="font-stencil text-[.7rem] tracking-stencil text-bone/80 mb-6">✦ {t('booking.eyebrow')}</div>
-          <h2 className="font-display text-bone" style={{ fontSize: 'clamp(2.6rem, 7vw, 5.2rem)', lineHeight: .95 }}>
+          <h2 className="font-display text-bone section-title">
             {t('booking.title')}
           </h2>
           <p className="text-bone/85 text-lg mt-6 max-w-2xl mx-auto">{t('booking.subtitle')}</p>
